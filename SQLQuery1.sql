@@ -28,3 +28,11 @@ select * from emplyoee_info order by emp_salary desc;
 
 select SUM(emp_salary) as sum_of_emplyoee_salary from emplyoee_info 
 select AVG(emp_salary) as avg_Salary from emplyoee_info
+select* from emplyoee_info where emp_salary=(select min(emp_salary) from emplyoee_info)
+
+
+select upper(emp_name) as Name from emplyoee_info order by emp_salary
+
+select * from emplyoee_info where emp_name= 'aditya' and emp_salary<= 900000
+select * from emplyoee_info where deptID!=3591
+ 
