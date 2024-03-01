@@ -36,3 +36,11 @@ select upper(emp_name) as Name from emplyoee_info order by emp_salary
 select * from emplyoee_info where emp_name= 'aditya' and emp_salary<= 900000
 select * from emplyoee_info where deptID!=3591
  
+ select GETDATE() as today_date
+ select SYSDATETIME() as system_date
+ select CURRENT_TIMESTAMP
+
+ select DATENAME(month,CURRENT_TIMESTAMP) as 'month'
+ select DATENAME(year,current_timestamp)as 'year'
+
+ select DATEDIFF(year,'july 5 2001',CURRENT_TIMESTAMP)as age
