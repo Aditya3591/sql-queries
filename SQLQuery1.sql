@@ -12,3 +12,13 @@ insert into emplyoee_info values(01,'aditya',100000.00,'software developer',8969
 insert into emplyoee_info values(02,'nutan',40000.00,'managment',7852745425,0091);
 insert into emplyoee_info values(03,'ajay',50000.00,'analyst',0657745425,1844);
 insert into emplyoee_info values(04,'naman',80000.00,'marketing',9235745425,7747);
+
+update emplyoee_info 
+set emp_salary=emp_salary+1000;
+update emplyoee_info
+set job='tester'
+where emp_name='ajay';
+
+update emplyoee_info set phone='9234554153', deptID=3591 where em_id=01;
+
+select * from emplyoee_info
