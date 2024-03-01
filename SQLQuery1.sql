@@ -22,3 +22,9 @@ where emp_name='ajay';
 update emplyoee_info set phone='9234554153', deptID=3591 where em_id=01;
 
 select * from emplyoee_info
+
+
+select * from emplyoee_info order by emp_salary desc;
+
+select SUM(emp_salary) as sum_of_emplyoee_salary from emplyoee_info 
+select AVG(emp_salary) as avg_Salary from emplyoee_info
