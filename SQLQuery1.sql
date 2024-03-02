@@ -13,34 +13,10 @@ insert into emplyoee_info values(02,'nutan',40000.00,'managment',7852745425,0091
 insert into emplyoee_info values(03,'ajay',50000.00,'analyst',0657745425,1844);
 insert into emplyoee_info values(04,'naman',80000.00,'marketing',9235745425,7747);
 
-update emplyoee_info 
-set emp_salary=emp_salary+1000;
-update emplyoee_info
-set job='tester'
-where emp_name='ajay';
-
-update emplyoee_info set phone='9234554153', deptID=3591 where em_id=01;
-
-select * from emplyoee_info
-
-
-select * from emplyoee_info order by emp_salary desc;
-
-select SUM(emp_salary) as sum_of_emplyoee_salary from emplyoee_info 
-select AVG(emp_salary) as avg_Salary from emplyoee_info
-select* from emplyoee_info where emp_salary=(select min(emp_salary) from emplyoee_info)
-
-
-select upper(emp_name) as Name from emplyoee_info order by emp_salary
-
-select * from emplyoee_info where emp_name= 'aditya' and emp_salary<= 900000
-select * from emplyoee_info where deptID!=3591
- 
- select GETDATE() as today_date
- select SYSDATETIME() as system_date
- select CURRENT_TIMESTAMP
-
- select DATENAME(month,CURRENT_TIMESTAMP) as 'month'
- select DATENAME(year,current_timestamp)as 'year'
-
- select DATEDIFF(year,'july 5 2001',CURRENT_TIMESTAMP)as age
+insert into emplyoee_info values(05,'yawan',78000.00,'software developer',8979531425,3591);
+insert into emplyoee_info values(06,'aklanta',40000.00,'analyst',7852256425,1844);
+insert into emplyoee_info values(07,'shardul',50000.00,'analyst',0657896425,1844);
+insert into emplyoee_info values(08,'rudra',80000.00,'marketing',9235745625,7747);
+SELECT * FROM emplyoee_info;
+select job ,count(deptID) AS 'COUNT' FROM emplyoee_info GROUP BY job;
+SELECT job, COUNT(*) AS num_employees FROM emplyoee_info GROUP BY job;
