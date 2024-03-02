@@ -25,3 +25,10 @@ select deptID , sum(emp_salary) as 'total salary of department of analyst' from 
 
 select top(3) emp_name ,emp_salary from emplyoee_info order by emp_salary desc
 
+
+--create a copy of table to another database--
+create database sample_db;
+use sample_db;
+
+select * into emplyoee_details from emplyoeeDB.dbo.emplyoee_info;
+select * from emplyoee_details
