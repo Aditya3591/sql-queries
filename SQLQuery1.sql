@@ -20,3 +20,6 @@ insert into emplyoee_info values(08,'rudra',80000.00,'marketing',9235745625,7747
 SELECT * FROM emplyoee_info;
 select job ,count(deptID) AS 'COUNT' FROM emplyoee_info GROUP BY job;
 SELECT job, COUNT(*) AS num_employees FROM emplyoee_info GROUP BY job;
+
+select deptID , sum(emp_salary) as 'sum of salary of department of analyst' from emplyoee_info group by deptID having deptID='1844';
+
