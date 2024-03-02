@@ -21,5 +21,7 @@ SELECT * FROM emplyoee_info;
 select job ,count(deptID) AS 'COUNT' FROM emplyoee_info GROUP BY job;
 SELECT job, COUNT(*) AS num_employees FROM emplyoee_info GROUP BY job;
 
-select deptID , sum(emp_salary) as 'sum of salary of department of analyst' from emplyoee_info group by deptID having deptID='1844';
+select deptID , sum(emp_salary) as 'total salary of department of analyst' from emplyoee_info group by deptID having deptID='1844';
+
+select top(3) emp_name ,emp_salary from emplyoee_info order by emp_salary desc
 
