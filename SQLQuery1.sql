@@ -32,3 +32,11 @@ use sample_db;
 
 select * into emplyoee_details from emplyoeeDB.dbo.emplyoee_info;
 select * from emplyoee_details
+
+use emplyoeeDB;
+alter table emplyoee_info
+add email_id varchar(30),emp_password varchar(20);
+
+insert into emplyoee_info values(09,'rocky',67000.00,'managment',8969745623,0091,'rocky12@gmail.com','rocky@12');
+select* from emplyoee_info
+
