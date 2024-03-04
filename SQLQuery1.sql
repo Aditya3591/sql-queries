@@ -20,3 +20,10 @@ create table department_info
 	select em_id,emp_name,emp_salary,dept_location,dept_name from emplyoee_info right outer join department_info on emplyoee_info.deptID=department_info.emp_dept_id;
 
 	select em_id,emp_name,emp_salary,dept_location,dept_name from emplyoee_info full outer join department_info on emplyoee_info.deptID=department_info.emp_dept_id;
+
+	select * from emplyoee_info;
+	-- display salary greater than yawan salary--
+	select * from emplyoee_info where emp_salary > (select emp_salary from emplyoee_info where emp_name='yawan');
+
+	select * from emplyoee_info where emp_salary > (select emp_salary from emplyoee_info where emp_name='yawan') and deptID =(select deptID from emplyoee_info
+	where emp_name='yawan');
