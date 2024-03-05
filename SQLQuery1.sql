@@ -1,14 +1,10 @@
-select getdate() as 'time';
-go
+create procedure proc_emplyoee_details
 
-begin 
-waitfor time '15:22:00'
+as
+
+begin
 select * from emplyoee_info;
 end
 go
 
-begin 
-waitfor delay '00:00:30';
-select * from emplyoee_info;
-end
-go
+execute proc_emplyoee_details;
