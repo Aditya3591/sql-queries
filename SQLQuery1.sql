@@ -25,4 +25,39 @@ select @name =emp_name,@salary=emp_salary from emplyoee_info where deptID =@depi
  print 'avg salary is less than 30000';
  end
  end
+ go
+
+
+ select * from emplyoee_info
+ begin
+	 while (select min(emp_salary) from emplyoee_info)<900000
+	 begin
+	 update emplyoee_info
+	 set emp_salary+=1000;
+	 print 'salary updated';
+	 select * from emplyoee_info
+
+	 if (select min(emp_salary) from emplyoee_info)>=900000
+	 begin
+	 print 'the avg salary is greater than 80000'
+	 break
+	 end
+
+	 end
+	end
+ go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
