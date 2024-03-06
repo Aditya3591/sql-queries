@@ -1,9 +1,6 @@
-create view v_emplyoee_details_based_on_location 
-as select em_id,emp_name,dept_location,dept_name from emplyoee_info inner join department_info on emp_dept_id=deptID
+with cte_emp_count(dep_id,emplyoeecount) as
+(
+	select deptID,count(*) as emplyoeecount from emplyoee_info group by deptID
+)
 
-
-select * from v_emplyoee_details_based_on_location;
-
-
-
-sp_helptext v_emplyoee_details_based_on_location;
+	select dept_name ,emplyoeecount from department_info join cte_emp_count on department_info.emp_dept_id=cte_emp_count.dep_id;
